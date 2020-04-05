@@ -1,0 +1,73 @@
+{% block sidebar %}
+<style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+       
+</style>
+
+   <!-- Sidebar Widgets Column -->
+        <div class="col-md-4 float-right ">
+        <div class="card my-4">
+                <h5 class="card-header">Latest Posts</h5>
+            <div class="card-body">
+                <h4 class="card-text text-center font-weight-bold mb-3">
+                    See all our latest posts
+                </h4>
+                {% for item in post_list %}
+                    <p class="card-text border-bottom border-dark">
+                        <div class="row no-gutters text-wrap clearfix">
+                            <div class="col-8">
+                                <small class="font-weight-bold text-wrap">
+                                    {{ item.created_on.date }}
+                                </small><br>
+                                <a href="{% url 'post_detail' slug=item.slug %}">
+                                    {{ item.title }}
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <img src="{{ item.thumbnail.url }}" width="100%" height="100%" class="float-right" style="padding: 0px; margin: 0px;">
+                            </div>
+                        </div>
+                    </p>
+                {% endfor %}
+                {% for item in post_item %}
+                    <p class="card-text border-bottom border-dark">
+                        <div class="row no-gutters text-wrap clearfix">
+                            <div class="col-8">
+                                <small class="font-weight-bold text-wrap">
+                                    {{ item.created_on.date }}
+                                </small><br>
+                                <a href="{% url 'post_detail' slug=item.slug %}">
+                                    {{ item.title }}
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <img src="{{ item.thumbnail.url }}" width="100%" height="100%" class="float-right" style="padding: 0px; margin: 0px;">
+                            </div>
+                        </div>
+                    </p>
+                {% endfor %}
+
+                {% for myposts in mypost_item %}
+                    <p class="card-text border-bottom border-dark">
+                        <div class="row no-gutters text-wrap clearfix">
+                            <div class="col-8">
+                                <small class="font-weight-bold text-wrap">
+                                    {{ myposts.created_on.date }}
+                                </small><br>
+                                <a href="{% url 'post_detail' slug=myposts.slug %}">
+                                    {{ myposts.title }}
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <img src="{{ myposts.thumbnail.url }}" width="100%" height="100%" class="float-right" style="padding: 0px; margin: 0px;">
+                            </div>
+                        </div>
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+
+{% endblock sidebar %}

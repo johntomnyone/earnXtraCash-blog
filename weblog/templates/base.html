@@ -1,0 +1,155 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'weblog/css/style.css' %}">
+
+      <!-- Favicon -->
+    <link rel="icon" href="static/weblog/img/exclogo.svg?{% now 'U' %}">
+
+    <title>{% block title %}EarnXtraCash | Welcome{% endblock %}</title>
+  </head>
+  <body>
+    <!--Alert bar for COVID-19 -->
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+      <strong>COVID-19!</strong> A great enemy to humanity. Stay at home. Stay safe. There's light at the end of the tunnel.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light shadow" id="mainNav">
+            <div class="container-fluid">
+                  <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'weblog/img/exclogo2.svg' %}" class="img-fluid"></a>
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item text-black">
+                              <a class="nav-link text-black font-weight-bold" href="{% url 'home' %}">FrontPage</a>
+                          </li>
+                          <li class="nav-item text-black">
+                              <a class="nav-link text-black font-weight-bold" href="{% url 'freelancing' %}">Freelancing</a>
+                          </li>
+                          <li class="nav-item text-black">
+                              <a class="nav-link text-black font-weight-bold" href="#">Guides</a>
+                          </li>
+                          <li class="nav-item text-black">
+                              <a class="nav-link text-black font-weight-bold" href="#">How Tos</a>
+                          </li>
+                          <li class="nav-item text-black">
+                              <a class="nav-link text-black font-weight-bold" href="#">Reviews</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+
+    {% block content %}
+
+    <!-- Content Goes here -->
+
+    {% endblock %}
+
+
+<!-- Footer -->
+<footer class=" container-fluid bg-grey" style="background-image: url({% static 'weblog/img/footer-bg.svg' %}); background-size: cover; padding-bottom: 0px; margin-top: 200px; margin-bottom: 0px; height: 500px;">
+  <div class="row mt-5 text-center" id="rows_container">
+    <div class="col-md-3">
+      <h4 class="text-light">Quick Links</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'home' %}">FrontPage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="{% url 'home' %}">Freelancing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Guides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">How Tos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Reviews</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+      <h4 class="text-light">Available Jobs</h4>
+      <img src="{% static 'weblog/img/favicon-1.png' %}" class="img-fluid">
+    </div>
+    <div class="col-md-3">
+      <h4 class="text-light">Freelancing Resources</h4>
+      <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="">Fiverr</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Freelancer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Upwork</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Toptal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Simply Hired</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">More Resources</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+      <h4 class="text-light">Programming</h4>
+      <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="">Python Tutorial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">HTML Tutorial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">CSS Tutorial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">JavaScript Tutorial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">C++ Tutorial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">More Tutorial</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+
+    <div class="row" id="Copyright">
+      <div class="col-12">
+        <p class="text-dark text-center">Copyright &copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> | EarnXtraCash
+        </p>
+      </div>
+    </div>
+</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
