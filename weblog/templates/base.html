@@ -12,6 +12,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" href="{% static 'weblog/css/style.css' %}">
 
       <!-- Favicon -->
@@ -21,7 +24,7 @@
   </head>
   <body>
     <!--Alert bar for COVID-19 -->
-    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
       <strong>COVID-19!</strong> A great enemy to humanity. Stay at home. Stay safe. There's light at the end of the tunnel.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -55,7 +58,13 @@
                   </div>
               </div>
           </nav>
-
+      <!--     <div class="icon-bar">
+            <a class="active" href="#"><i class="fa fa-home"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-globe"></i></a>
+            <a href="#"><i class="fa fa-trash"></i></a>
+          </div> -->
 
     {% block content %}
 

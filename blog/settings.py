@@ -18,7 +18,7 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'earnxtracashblog.herokuapp.com' ]
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django.contrib.sitemaps',
     'whitenoise.runserver_nostatic',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 django_heroku.settings(locals())
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
