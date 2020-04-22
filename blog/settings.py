@@ -18,9 +18,10 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'earnxtracashblog.herokuapp.com' ]
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pure-plains-79163.herokuapp.com']
 
 
 # Application definition
@@ -126,16 +127,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'), 
-    )
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+    
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/MEDIA_ROOT/'
-MEDIA_ROOT = (
-    os.path.join(BASE_DIR, 'media_root')
-    )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+    
 
 STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
 

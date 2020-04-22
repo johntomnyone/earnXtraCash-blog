@@ -35,12 +35,14 @@
 			<div class="row no-gutters">
 				{% for myposts in mypost_item %}
 						<div class="col-4 mt-3">
-							<div class="card" style="width: 100%;">
-								<div class="card-body no-gutters">
-							  		<img src="{{ myposts.thumbnail.url }}" class="d-block w-100" alt="...">
-							    	<h5 class="card-title">{{ myposts.title }}</h5>
-							    	<a href="{% url 'post_detail' myposts.slug %}" class="btn btn-primary">Read More &rarr;</a>
-							  </div>
+							<div class="card-group">
+								<div class="card p-2 m-2">
+									<img src="{{ myposts.thumbnail.url }}" class="card-img-top" alt="earnxtracash">
+									<div class="card-body">
+								    	<h5 class="card-title">{{ myposts.title }}</h5>
+								    	<a href="{% url 'post_detail' myposts.slug %}" class="btn btn-primary">Read More &rarr;</a>
+								  </div>
+								</div>
 							</div>
 						</div>
 					

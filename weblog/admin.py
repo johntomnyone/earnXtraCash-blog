@@ -9,10 +9,10 @@ from .models import Post, Comment
 
 
 class PostAdmin(SummernoteModelAdmin):# admin.ModelAdmin):
-	# list_display = ('title', 'slug', 'created_on', 'author', 'status')
-	# list_filter = ('status', 'created_on',)
-	# search_fields = ['title', 'content']
-	# prepopulated_fields = {'slug': ('title',)} 
+	list_display = ('title', 'slug', 'created_on', 'author', 'status')
+	list_filter = ('status', 'created_on',)
+	search_fields = ['title', 'content']
+	prepopulated_fields = {'slug': ('title',)} 
 	summernote_fields = ('content')
 
 
